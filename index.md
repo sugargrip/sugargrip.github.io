@@ -15,12 +15,14 @@ You decide how much sugar fits your life. Three things keep you in that zone: a
 log that takes seconds, real help the moment a craving hits, and a picture of
 your own habits that gets sharper every week.
 
-<a class="badge" href="https://apps.apple.com/us/app/sugargrip/id6796822350">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/img/appstore-white.svg">
-    <img src="/img/appstore-black.svg" alt="Download SugarGrip on the App Store">
-  </picture>
-</a>
+<div class="badge">
+  <a href="https://apps.apple.com/us/app/sugargrip/id6796822350">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="/img/appstore-white.svg">
+      <img src="/img/appstore-black.svg" alt="Download SugarGrip on the App Store">
+    </picture>
+  </a>
+</div>
 
 <div class="shots">
   <img src="/img/home-allowance.png" alt="The SugarGrip home screen, counting treats up toward a daily allowance">
