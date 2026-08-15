@@ -31,7 +31,10 @@
   .badge a:hover { transform: scale(1.04); }
   .badge img { height: 64px; width: auto; display: block; }
   .shots { display: flex; gap: 1.1rem; margin: 4rem 0 4.5rem; }
-  .shots img { width: 100%; border-radius: 18px; border: 1px solid #e6e6e6;
+  /* min-width:0 — flex items default to min-width:auto, so these would refuse
+     to shrink below the PNG's intrinsic 620px and overflow the viewport */
+  .shots img { flex: 1; min-width: 0; width: 100%; height: auto;
+               border-radius: 18px; border: 1px solid #e6e6e6;
                box-shadow: 0 6px 28px rgba(0,0,0,.10); }
   /* columns, not grid: h2 and p are siblings, so grid cells would split each
      heading from its own paragraph */
