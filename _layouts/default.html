@@ -17,22 +17,45 @@
   a { color: #a8501f; }
   hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0 1rem; }
   footer { font-size: .85rem; color: #666; }
-  .lede { font-size: 1.15rem; }
-  .badge { margin: 1.25rem 0 .25rem; }
-  .badge a { display: inline-block; }
-  .badge img { height: 48px; width: auto; display: block; }
-  .shots { display: flex; gap: .6rem; margin: 2rem 0; }
-  .shots img { width: 100%; border-radius: 10px; border: 1px solid #ddd; }
+
+  /* landing page only */
+  body.home { max-width: 52rem; margin-top: 4.5rem; }
+  .hero { text-align: center; }
+  .hero h1 { font-size: clamp(2.6rem, 8vw, 3.6rem); line-height: 1.05;
+             letter-spacing: -.035em; margin: 0 0 .75rem; }
+  .lede { font-size: clamp(1.2rem, 3.4vw, 1.5rem); line-height: 1.35; font-weight: 500;
+          letter-spacing: -.015em; margin: 0 0 1.25rem; }
+  .sub { max-width: 31rem; margin: 0 auto; color: #5b5b5b; }
+  .badge { margin-top: 2.25rem; }
+  .badge a { display: inline-block; transition: transform .15s ease; }
+  .badge a:hover { transform: scale(1.04); }
+  .badge img { height: 64px; width: auto; display: block; }
+  .shots { display: flex; gap: 1.1rem; margin: 4rem 0 4.5rem; }
+  .shots img { width: 100%; border-radius: 18px; border: 1px solid #e6e6e6;
+               box-shadow: 0 6px 28px rgba(0,0,0,.10); }
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 3rem; }
+  .features h2 { font-size: 1.15rem; letter-spacing: -.01em; margin: 1.75rem 0 .4rem; }
+  .features p { margin-top: 0; color: #444; }
+  .contact { margin-top: 3.5rem; text-align: center; color: #5b5b5b; }
+  @media (max-width: 34rem) {
+    .features { grid-template-columns: 1fr; }
+    .shots { gap: .5rem; }
+    .shots img { border-radius: 12px; }
+    .badge img { height: 56px; }
+  }
+
   @media (prefers-color-scheme: dark) {
     body { background: #131313; color: #ddd; }
     a { color: #e8a06a; }
     hr { border-top-color: #333; }
     footer { color: #888; }
-    .shots img { border-color: #333; }
+    .sub, .contact { color: #a0a0a0; }
+    .features p { color: #bbb; }
+    .shots img { border-color: #2c2c2c; box-shadow: 0 6px 28px rgba(0,0,0,.5); }
   }
 </style>
 </head>
-<body>
+<body class="{{ page.body_class }}">
 {{ content }}
 <hr>
 <footer><a href="/privacy-policy">Privacy Policy</a> &middot; <a href="/support">Support</a></footer>
