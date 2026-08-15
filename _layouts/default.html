@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title }}</title>
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+{% endif %}
 <style>
   body { max-width: 38rem; margin: 3rem auto; padding: 0 1.25rem; color: #222;
          font: 16px/1.6 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
@@ -12,11 +17,17 @@
   a { color: #a8501f; }
   hr { border: 0; border-top: 1px solid #ddd; margin: 3rem 0 1rem; }
   footer { font-size: .85rem; color: #666; }
+  .lede { font-size: 1.15rem; }
+  .badge { display: inline-block; margin: 1.25rem 0 .25rem; }
+  .badge img { height: 48px; width: auto; display: block; }
+  .shots { display: flex; gap: .6rem; margin: 2rem 0; }
+  .shots img { width: 100%; border-radius: 10px; border: 1px solid #ddd; }
   @media (prefers-color-scheme: dark) {
     body { background: #131313; color: #ddd; }
     a { color: #e8a06a; }
     hr { border-top-color: #333; }
     footer { color: #888; }
+    .shots img { border-color: #333; }
   }
 </style>
 </head>
