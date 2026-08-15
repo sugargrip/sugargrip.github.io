@@ -33,12 +33,16 @@
   .shots { display: flex; gap: 1.1rem; margin: 4rem 0 4.5rem; }
   .shots img { width: 100%; border-radius: 18px; border: 1px solid #e6e6e6;
                box-shadow: 0 6px 28px rgba(0,0,0,.10); }
-  .features { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 3rem; }
-  .features h2 { font-size: 1.15rem; letter-spacing: -.01em; margin: 1.75rem 0 .4rem; }
-  .features p { margin-top: 0; color: #444; }
+  /* columns, not grid: h2 and p are siblings, so grid cells would split each
+     heading from its own paragraph */
+  .features { columns: 2; column-gap: 3rem; }
+  .features h2 { font-size: 1.15rem; letter-spacing: -.01em; margin: 0 0 .4rem;
+                 break-after: avoid; -webkit-column-break-after: avoid; }
+  .features p { margin: 0 0 2rem; color: #444;
+                break-inside: avoid; -webkit-column-break-inside: avoid; }
   .contact { margin-top: 3.5rem; text-align: center; color: #5b5b5b; }
   @media (max-width: 34rem) {
-    .features { grid-template-columns: 1fr; }
+    .features { columns: 1; }
     .shots { gap: .5rem; }
     .shots img { border-radius: 12px; }
     .badge img { height: 56px; }
