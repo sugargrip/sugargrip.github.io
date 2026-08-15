@@ -46,9 +46,14 @@
   .contact { margin-top: 3.5rem; text-align: center; color: #5b5b5b; }
   @media (max-width: 34rem) {
     .features { columns: 1; }
-    .shots { gap: .5rem; }
-    .shots img { border-radius: 12px; }
     .badge img { height: 56px; }
+    /* three shots side by side land at ~110px on a phone — too small to read.
+       Scroll them instead, at a width where one is actually legible. */
+    .shots { gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory;
+             margin: 2.5rem -1.25rem 3rem; padding: 0 1.25rem;
+             -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .shots::-webkit-scrollbar { display: none; }
+    .shots img { flex: 0 0 62%; scroll-snap-align: center; border-radius: 14px; }
   }
 
   @media (prefers-color-scheme: dark) {
