@@ -24,9 +24,11 @@ description: >-
 </div>
 
 <div class="shots">
-  <img src="/img/home-allowance.png" alt="The SugarGrip home screen, counting treats up toward a daily allowance">
-  <img src="/img/sos-doors.png" alt="Craving SOS offering three choices: ride it out, downsize it, or have it">
-  <img src="/img/calendar.png" alt="A month calendar showing days in control, clean days and cheat days">
+  <img src="/img/screenshot1.jpg" alt="Track sugar without giving it up — the Today screen counting treats up toward a daily allowance">
+  <img src="/img/screenshot2.jpg" alt="Stop sugar cravings in the moment — Craving SOS offering three doors: ride it out, downsize it, or have it">
+  <img src="/img/screenshot3.jpg" alt="Cut back on sugar, cheat days included — a month calendar of days in control with a streak and planned cheat days">
+  <img src="/img/screenshot4.jpg" alt="Quit the guilt, not the sugar — reaching a new level for pausing between the want and the reach">
+  <img src="/img/screenshot5.jpg" alt="A sugar diary that rewards honesty — logging a treat earns XP: enjoy every bite, you chose this">
 </div>
 
 <div class="features" markdown="1">

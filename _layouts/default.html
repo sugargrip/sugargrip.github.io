@@ -30,10 +30,13 @@
   .badge a { display: inline-block; transition: transform .15s ease; }
   .badge a:hover { transform: scale(1.04); }
   .badge img { height: 64px; width: auto; display: block; }
-  .shots { display: flex; gap: 1.1rem; margin: 4rem 0 4.5rem; }
-  /* min-width:0 — flex items default to min-width:auto, so these would refuse
-     to shrink below the PNG's intrinsic 620px and overflow the viewport */
-  .shots img { flex: 1; min-width: 0; width: 100%; height: auto;
+  /* five shots side by side would land at ~150px each — scroll instead, three
+     visible plus a peek of the fourth as the scroll affordance */
+  .shots { display: flex; gap: 1.1rem; margin: 4rem 0 4.5rem;
+           overflow-x: auto; scroll-snap-type: x mandatory;
+           -webkit-overflow-scrolling: touch; }
+  .shots img { flex: 0 0 30%; min-width: 0; width: 100%; height: auto;
+               scroll-snap-align: center;
                border-radius: 18px; border: 1px solid #e6e6e6;
                box-shadow: 0 6px 28px rgba(0,0,0,.10); }
   /* columns, not grid: h2 and p are siblings, so grid cells would split each
@@ -47,13 +50,11 @@
   @media (max-width: 34rem) {
     .features { columns: 1; }
     .badge img { height: 56px; }
-    /* three shots side by side land at ~110px on a phone — too small to read.
-       Scroll them instead, at a width where one is actually legible. */
-    .shots { gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory;
-             margin: 2.5rem -1.25rem 3rem; padding: 0 1.25rem;
-             -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    /* on a phone, widen each shot so one is actually legible */
+    .shots { gap: .75rem; margin: 2.5rem -1.25rem 3rem; padding: 0 1.25rem;
+             scrollbar-width: none; }
     .shots::-webkit-scrollbar { display: none; }
-    .shots img { flex: 0 0 62%; scroll-snap-align: center; border-radius: 14px; }
+    .shots img { flex: 0 0 62%; border-radius: 14px; }
   }
 
   @media (prefers-color-scheme: dark) {
