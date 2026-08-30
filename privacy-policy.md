@@ -7,7 +7,7 @@ title: SugarGrip Privacy Policy
 _Last updated: 30 August 2026_
 
 Everything you log in SugarGrip stays on your device, with one exception: to
-write your morning review, the log of the day it covers is sent to Google. The
+write the app's AI notes and insights, parts of your log are sent to Google. The
 app also includes Meta's advertising SDK, which sends limited technical
 information about installs and app opens — never your logs. All three parts are
 explained below.
@@ -20,34 +20,35 @@ has no accounts, no servers, and no cloud backup. We cannot see any of it, and
 there is no copy of it anywhere else. The one thing that leaves your device is
 described in the next section.
 
-## The morning review
+## AI notes and insights
 
-Each morning SugarGrip writes you a short note about the day before — and, on
-the first morning of the week, about the week just gone. The note is written by
-Google's Gemini model, reached through Firebase AI Logic, and writing it means
-sending the log of that period to Google:
+SugarGrip writes you short personal notes and insights from your own log — a
+note about how a day or a week went, a line for you in the middle of a craving.
+They are written by Google's Gemini model, reached through Firebase AI Logic,
+and writing one means sending the part of your log it draws on to Google:
 
-- The times, kinds and amounts of the treats you logged in that period, and any
-  notes you wrote on them
-- Your craving check-ins from that period — how they started, how they ended,
-  and any "what's going on" tags you chose
+- The times, kinds and amounts of the treats you logged, and any notes you
+  wrote on them
+- Your craving check-ins — how they started, how they ended, the "what's going
+  on" tags you chose, and anything you typed in your own words
 - Small copies (at most 384 pixels on the long side) of any photos attached to
   those entries
 - Your first name if you gave one, your daily allowance, and a short rolling
-  summary the model keeps about your habits, so later notes can be more
-  specific than "you logged three things"
+  summary the model keeps about your habits, so notes can be more specific
+  than "you logged three things"
 
-Nothing else is sent. Not your other days, not your contact details, not your
-device or advertising identifiers, and not an account — there isn't one. Google
-returns the note, your phone stores it, and the note is what you read. Google's
-handling of what it receives is governed by
+The exact notes the app writes will change as it grows, but the shape stays
+the same: only the log behind the note being written for you, sent at the
+moment it is written, never in the background. Nothing else is sent. Not your
+contact details, not your device or advertising identifiers, and not an
+account — there isn't one. Google returns the note, your phone stores it, and
+the note is what you read. Google's handling of what it receives is governed by
 [Google's privacy policy](https://policies.google.com/privacy) and the
 [Gemini API terms](https://ai.google.dev/gemini-api/terms).
 
-The review is part of the app rather than a separate feature to switch on. The
-8am notification can be turned off under Reminders, but that controls the
-nudge, not the note. If you would rather your log were never sent anywhere, the
-app is not for you — and deleting it removes everything on your device.
+These notes are part of the app rather than a separate feature to switch on.
+If you would rather your log were never sent anywhere, the app is not for
+you — and deleting it removes everything on your device.
 
 ## What leaves your device for advertising
 
@@ -95,14 +96,14 @@ You can limit things further:
 
 If you attach a photo to a log, it is saved in the app's own storage on your
 device. The only time a photo leaves it is as the small copy sent to Google
-when a morning review covers the day that photo belongs to, as described above.
+when an AI note covers the day that photo belongs to, as described above.
 It is never uploaded anywhere else, and never to Meta.
 
 ## Deleting your data
 
 Deleting the app removes all of its data from your device. There is nothing
 stored elsewhere for us to delete — we hold no copy of your logs and there is
-no account to close. What has already been sent to Google to write a review is
+no account to close. What has already been sent to Google to write a note is
 held under Google's terms, linked above. Information already sent to Meta is
 aggregated ad-measurement data that is not linked to you by name and cannot be
 traced back to an individual on request — to limit it going forward, use the
